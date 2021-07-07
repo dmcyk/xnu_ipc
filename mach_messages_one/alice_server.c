@@ -77,22 +77,5 @@ int main() {
     }
   }
 
-  // dispatch_source_t recvSource = dispatch_source_create(
-  //    DISPATCH_SOURCE_TYPE_MACH_RECV,
-  //    recvPort,
-  //    /* mask */ 0,
-  //    dispatch_get_main_queue());
-
-  // dispatch_source_set_event_handler(recvSource, ^() {
-  //  kern_return_t ret = retrieve_msg(recvPort);
-  //  if (ret != KERN_SUCCESS) {
-  //    printf("Failed mach_msg: 0x%x\n", ret);
-  //  }
-  //});
-
-  // dispatch_resume(recvSource);
-
-  // dispatch_main();
-
   return 0;
 }

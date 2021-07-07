@@ -1,4 +1,5 @@
 #include <bootstrap.h>
+
 // mach
 #include <mach/mach_init.h>
 #include <mach/mach_port.h>
@@ -76,6 +77,7 @@ int main() {
     return EXIT_FAILURE;
   }
 
+  // Make client sleep for a while to inspect ports using `lsmp`.
   sleep(60);
 
   return 0;
