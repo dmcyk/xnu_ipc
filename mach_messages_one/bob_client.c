@@ -1,6 +1,5 @@
+// Darwin
 #include <bootstrap.h>
-
-// mach
 #include <mach/mach_init.h>
 #include <mach/mach_port.h>
 #include <mach/message.h>
