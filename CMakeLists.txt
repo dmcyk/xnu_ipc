@@ -13,3 +13,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_definitions(-O0 -g)
 
 add_subdirectory(mach_messages_one)
+add_subdirectory(mach_apis_two)
