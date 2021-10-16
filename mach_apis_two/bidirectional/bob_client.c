@@ -74,7 +74,8 @@ int main() {
   message.header.msgh_remote_port = port;
   message.header.msgh_local_port = replyPort;
 
-  // copy send right on the remote port
+  // Copy send right on the remote port
+  // Make send_once right on the local port
   message.header.msgh_bits = MACH_MSGH_BITS_SET(
       /* remote */ MACH_MSG_TYPE_COPY_SEND,
       /* local */ MACH_MSG_TYPE_MAKE_SEND,
@@ -120,9 +121,10 @@ int main() {
   }
 
   if (ret == MACH_RCV_TIMED_OUT) {
-    printf("Receive timed out, no more messages from alice.");
+    printf("Receive timed out, no more messages from alice yet.\n");
   } else if (ret != MACH_MSG_SUCCESS) {
     printf("Failed to receive a message: %#x\n", ret);
+    return 1;
   }
 
   return 0;
