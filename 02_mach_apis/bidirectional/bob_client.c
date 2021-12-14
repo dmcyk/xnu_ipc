@@ -15,9 +15,8 @@
 
 #define MS_IN_S 1000
 
-mach_msg_return_t receive_msg(
-    mach_port_name_t recvPort,
-    mach_msg_timeout_t timeout) {
+mach_msg_return_t
+receive_msg(mach_port_name_t recvPort, mach_msg_timeout_t timeout) {
   // Message buffer.
   ReceiveMessage receiveMessage = {0};
 

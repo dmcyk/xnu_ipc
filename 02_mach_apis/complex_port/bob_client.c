@@ -15,9 +15,8 @@
 
 #define MS_IN_S 1000
 
-mach_msg_return_t receive_msg(
-    mach_port_name_t recvPort,
-    mach_msg_timeout_t timeout) {
+mach_msg_return_t
+receive_msg(mach_port_name_t recvPort, mach_msg_timeout_t timeout) {
   // Message buffer.
   ReceiveMessage receiveMessage = {0};
 
@@ -78,8 +77,8 @@ int main() {
       /* remote */ MACH_MSG_TYPE_COPY_SEND,
       /* local */ 0,
       /* voucher */ 0,
-      /* other */ MACH_MSGH_BITS_COMPLEX);  // Make sure not to forget to set
-                                            // the complex bit! :)
+      /* other */ MACH_MSGH_BITS_COMPLEX); // Make sure not to forget to set
+                                           // the complex bit! :)
   message.header.msgh_id = MSG_ID_PORT;
   message.header.msgh_size = sizeof(message);
   message.msgh_descriptor_count = 1;
