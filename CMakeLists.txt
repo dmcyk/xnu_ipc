@@ -12,5 +12,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Example, always build in debug
 add_definitions(-O0 -g)
 
-add_subdirectory(01_mach_essages)
+add_subdirectory(01_mach_messages)
 add_subdirectory(02_mach_apis)
