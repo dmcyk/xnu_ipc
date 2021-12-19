@@ -1,5 +1,0 @@
-add_executable(bidirectional_server bidirectional/alice_server.c)
-add_executable(bidirectional_client bidirectional/bob_client.c)
-
-add_executable(complex_port_server complex_port/alice_server.c)
-add_executable(complex_port_client complex_port/bob_client.c)
