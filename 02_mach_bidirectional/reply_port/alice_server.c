@@ -12,10 +12,10 @@
 mach_msg_return_t send_reply(mach_port_name_t port, const Message *inMessage) {
   Message response = {0};
   response.header.msgh_bits =
-      inMessage->header.msgh_bits &  // received message already contains
-      MACH_MSGH_BITS_REMOTE_MASK;    // necessary remote bits to provide a
-                                     // response, because it can differ
-                                     // depending on SEND/SEND_ONCE.
+      inMessage->header.msgh_bits & // received message already contains
+      MACH_MSGH_BITS_REMOTE_MASK;   // necessary remote bits to provide a
+                                    // response, and it can differ
+                                    // depending on SEND/SEND_ONCE right.
 
   response.header.msgh_remote_port = port;
   response.header.msgh_id = inMessage->header.msgh_id;
@@ -38,9 +38,8 @@ mach_msg_return_t send_reply(mach_port_name_t port, const Message *inMessage) {
       /* notify port */ MACH_PORT_NULL);
 }
 
-mach_msg_return_t receive_msg(
-    mach_port_name_t recvPort,
-    ReceiveMessage *buffer) {
+mach_msg_return_t
+receive_msg(mach_port_name_t recvPort, ReceiveMessage *buffer) {
   mach_msg_return_t ret = mach_msg(
       /* msg */ (mach_msg_header_t *)buffer,
       /* option */ MACH_RCV_MSG,
