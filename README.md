@@ -10,3 +10,5 @@ Companion repository to a series of blog posts covering XNU IPC.
   in `02_mach_bidirectional`
 3. [XNU IPC - Introduction to OOL data](https://dmcyk.xyz/post/xnu_ipc_iii_ool_data/)
   in `03_mach_ool_intro`
+3. [XNU IPC - OOL data and virtual memory](https://dmcyk.xyz/post/xnu_ipc_iv_ool_vm/)
+  in `04_mach_ool_vm`

@@ -1,0 +1,7 @@
+add_executable(ool_data_transfer_options_server ool_data_transfer_options/alice_server.c)
+add_executable(ool_data_transfer_options_client ool_data_transfer_options/bob_client.c)
+
+add_executable(ool_virtual_copy_large_server ool_virtual_copy_large/alice_server.c)
+add_executable(ool_virtual_copy_large_client ool_virtual_copy_large/bob_client.c)
+
+add_executable(check_vm_fork check_vm_fork.c)
